@@ -1,5 +1,5 @@
 # Global
-default['uchiwa']['version'] = '0.2.1-1'
+default['uchiwa']['version'] = '0.2.3-1'
 default['uchiwa']['install_method'] = 'package'
 default['uchiwa']['apt_repo_url'] = 'http://repos.sensuapp.org/apt'
 default['uchiwa']['yum_repo_url'] = 'http://repos.sensuapp.org'
@@ -10,6 +10,9 @@ default['uchiwa']['group'] = 'uchiwa'
 default['uchiwa']['sensu_homedir'] = '/etc/sensu'
 default['uchiwa']['uchiwa_homedir'] = '/opt/uchiwa/usr/src/uchiwa'
 default['uchiwa']['add_repo'] = true
+
+# Set to false if you want to wrap this with runit or another process monitor
+default['uchiwa']['manage_service'] = true
 
 # Uchiwa Settings
 default['uchiwa']['settings']['user'] = 'admin'
