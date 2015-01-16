@@ -1,5 +1,5 @@
 # Global
-default['uchiwa']['version'] = '0.2.6-1'
+default['uchiwa']['version'] = '0.4.0-1'
 default['uchiwa']['install_method'] = 'repo'
 default['uchiwa']['apt_repo_url'] = 'http://repos.sensuapp.org/apt'
 default['uchiwa']['yum_repo_url'] = 'http://repos.sensuapp.org'
@@ -9,7 +9,7 @@ default['uchiwa']['owner'] = 'uchiwa'
 default['uchiwa']['group'] = 'uchiwa'
 default['uchiwa']['sensu_homedir'] = '/etc/sensu'
 default['uchiwa']['add_repo'] = true
-default['uchiwa']['package_options'] = ['']
+default['uchiwa']['package_options'] = nil
 
 # Set to false if you want to wrap this with runit or another process monitor
 default['uchiwa']['manage_service'] = true
@@ -26,7 +26,7 @@ default['uchiwa']['api'] = [
   {
     'name' => 'Sensu',
     'host' => '127.0.0.1',
-    'port' => 4567,
+    'url' => 'http://127.0.0.1:4567',
     'path' => '',
     'ssl' => false,
     'timeout' => 5
